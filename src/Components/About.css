@@ -1,0 +1,264 @@
+
+
+.about-section {
+  background: #0d403d;
+  padding: 60px 0;
+  color: white;
+  overflow: hidden;
+}
+
+
+.about-content {
+  padding: 40px 55px 40px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.about-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  margin-bottom: 22px;
+
+  background: #d9f3e8;
+  color: #26745b;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-radius: 30px;
+}
+
+.about-content h2 {
+  color: #ffffff;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.about-content p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 470px;
+  margin-bottom: 28px;
+}
+
+.about-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-content li {
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 16px;
+
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.about-content li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 23px;
+  height: 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #d9f3e8;
+  color: #26745b;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* =========================
+   RIGHT VISUAL
+========================= */
+
+.about-visual {
+  position: relative;
+  min-height: auto;
+  height: auto;
+  background: transparent;
+  overflow: visible;
+}
+
+/* =========================
+   STATISTICS GRID
+========================= */
+
+.about-stats {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+
+  z-index: 2;
+}
+
+/* =========================
+   STAT CARDS
+========================= */
+
+.stat-card {
+  min-width: 0;
+  min-height: 220px;
+  padding: 22px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+
+  color: #ffffff;
+  backdrop-filter: blur(5px);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* CARD IMAGE */
+
+.stat-icon {
+  font-size: 35px;
+  color: #087f70;
+  background: #d0ebe5;
+  padding: 15px;
+  border-radius: 50%;
+  box-sizing: content-box;
+  margin-bottom: 14px;
+}
+
+/* STAT NUMBER */
+
+.stat-card h3 {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.stat-card h3 span {
+  color: #ff725e;
+}
+
+/* CARD LABEL */
+
+.stat-card p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 8px 0 0;
+}
+.stat-highlight {
+  background: #ffc653;
+  color: #103f3b;
+  border-color: transparent;
+  border-radius: 20px;
+   transform: scale(1.08);
+  z-index: 2;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.stat-highlight p {
+  color: #31534a;
+}
+
+.stat-highlight h3 span {
+  color: #103f3b;
+}
+
+.stat-card h3 .star {
+  color: #ff725e;
+}
+
+@media (max-width: 991px) {
+  .about-content {
+    padding: 30px 20px 50px;
+  }
+
+  .about-visual {
+    margin-top: 20px;
+  }
+
+  .about-stats {
+    max-width: 450px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .about-section {
+    padding: 50px 0;
+  }
+
+  .about-content {
+    padding: 20px 15px 40px;
+  }
+
+  .about-content h2 {
+    font-size: 34px;
+  }
+
+  .about-stats {
+    width: 100%;
+    padding: 10px 5px 0;
+    gap: 12px;
+  }
+
+  .stat-card {
+    min-height: 190px;
+    padding: 16px;
+  }
+
+  .stat-image {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 14px;
+  border-radius: 12px;
+}
+
+  .stat-card h3 {
+    font-size: 25px;
+  }
+
+  .stat-card p {
+    font-size: 11px;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .about-section * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

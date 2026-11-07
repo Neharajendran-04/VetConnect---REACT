@@ -1,0 +1,137 @@
+.services-section {
+  padding: 100px 0;
+
+  background-image:
+     linear-gradient(
+      rgba(248, 246, 239, 0.55),
+      rgba(248, 246, 239, 0.65)
+    ),
+    url("/services-bg.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.services-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 55px;
+}
+
+.services-badge {
+  display: inline-block;
+  color: #087f70;
+  background: #e0f1ec;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.services-heading h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #173f3a;
+  margin-bottom: 18px;
+}
+
+.services-heading p {
+  font-size: 16px;
+  color: #66736f;
+  line-height: 1.7;
+}
+
+
+.service-card {
+  height: 100%;
+  background: #ffffff;
+  padding: 35px 28px;
+  border-radius: 20px;
+  border: 1px solid #e8eee9;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(8, 127, 112, 0.12);
+  border-color: #b8ded5;
+}
+
+.service-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0f1ec;
+  color: #087f70;
+  border-radius: 18px;
+  font-size: 28px;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  background: #087f70;
+  color: #ffffff;
+}
+
+.service-card h3 {
+  font-size: 21px;
+  font-weight: 700;
+  color: #173f3a;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: #66736f;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.service-link {
+  color: #087f70;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.service-link span {
+  margin-left: 5px;
+  transition: margin-left 0.3s ease;
+}
+
+.service-link:hover {
+  color: #065f54;
+}
+
+.service-link:hover span {
+  margin-left: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 70px 0;
+  }
+
+  .services-heading h2 {
+    font-size: 32px;
+  }
+
+  .service-card {
+    padding: 28px 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-heading h2 {
+    font-size: 28px;
+  }
+}
