@@ -16,6 +16,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import "./FindVet.css";
+import DashboardSidebar from "../../Components/DashboardSidebar";
 
 const veterinarians = [
   {
@@ -82,37 +83,7 @@ function FindVeterinarian() {
 
   return (
     <div className="vc-vet-page">
-      <aside className="vc-vet-sidebar">
-        <Link to="/dashboard" className="vc-vet-logo" title="VetConnect">
-          <FaPaw />
-        </Link>
-
-        <nav className="vc-vet-nav">
-          <Link to="/dashboard" title="Dashboard">
-            <FaHome />
-          </Link>
-
-          <Link
-            to="/find-veterinarian"
-            className="active"
-            title="Find Veterinarian"
-          >
-            <FaUserMd />
-          </Link>
-
-          <Link to="/appointments" title="Appointments">
-            <FaCalendarAlt />
-          </Link>
-
-          <Link to="/profile" title="Profile">
-            <FaUser />
-          </Link>
-        </nav>
-
-        <Link to="/login" className="vc-vet-logout" title="Logout">
-          <FaSignOutAlt />
-        </Link>
-      </aside>
+      <DashboardSidebar />
 
       <main className="vc-vet-main">
         <header className="vc-vet-header">

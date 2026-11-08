@@ -1,0 +1,487 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.vc-medical-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f7faf8;
+  color: #173f38;
+  font-family: "DM Sans", sans-serif;
+}
+
+.vc-medical-sidebar {
+  width: 245px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 18px;
+  background: #fff;
+  border-right: 1px solid #e8efeb;
+}
+
+.vc-medical-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 42px;
+  padding: 0 10px;
+  color: #087f70;
+  font: 800 21px "Manrope", sans-serif;
+}
+
+.vc-medical-logo svg {
+  padding: 10px;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: #e8f7f1;
+}
+
+.vc-medical-menu-title {
+  padding: 0 12px;
+  margin-bottom: 15px;
+  color: #9aaba5;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.vc-medical-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.vc-medical-sidebar nav a,
+.vc-medical-logout {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 14px;
+  border-radius: 10px;
+  color: #71857e;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.vc-medical-sidebar nav a:hover,
+.vc-medical-sidebar nav a.active {
+  background: #e8f7f1;
+  color: #087f70;
+}
+
+.vc-medical-sidebar nav a.active {
+  font-weight: 700;
+}
+
+.vc-medical-logout {
+  margin-top: auto;
+}
+
+.vc-medical-main {
+  flex: 1;
+  min-width: 0;
+  padding: 30px 38px;
+}
+
+.vc-medical-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.vc-medical-header > div:first-child > span {
+  color: #087f70;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.vc-medical-header h1 {
+  margin: 6px 0;
+  font: 800 28px "Manrope", sans-serif;
+}
+
+.vc-medical-header p {
+  margin: 0;
+  color: #84968e;
+  font-size: 14px;
+}
+
+.vc-medical-header-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.vc-medical-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #d9f0e8;
+  color: #087f70;
+  font-weight: 700;
+}
+
+.vc-medical-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.vc-medical-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 23px;
+  background: #fff;
+  border: 1px solid #e7efea;
+  border-radius: 14px;
+}
+
+.vc-medical-summary-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #e8f7f1;
+  color: #087f70;
+  font-size: 20px;
+}
+
+.vc-medical-summary-card span {
+  color: #84968e;
+  font-size: 12px;
+}
+
+.vc-medical-summary-card h2 {
+  margin: 6px 0;
+  font: 800 25px "Manrope", sans-serif;
+}
+
+.vc-medical-summary-card p {
+  margin: 0;
+  color: #84968e;
+  font-size: 11px;
+}
+
+.vc-medical-content {
+  padding: 25px;
+  background: #fff;
+  border: 1px solid #e7efea;
+  border-radius: 15px;
+}
+
+.vc-medical-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.vc-medical-section-heading h2 {
+  margin: 0;
+  font: 800 19px "Manrope", sans-serif;
+}
+
+.vc-medical-section-heading p {
+  margin: 7px 0 0;
+  color: #84968e;
+  font-size: 12px;
+}
+
+.vc-medical-download-all {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 15px;
+  border: 1px solid #dce9e2;
+  border-radius: 9px;
+  background: #fff;
+  color: #087f70;
+  font: 600 12px "DM Sans", sans-serif;
+  cursor: pointer;
+}
+
+.vc-medical-filters {
+  display: flex;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.vc-medical-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  padding: 0 13px;
+  border: 1px solid #e3ece7;
+  border-radius: 9px;
+  color: #84968e;
+}
+
+.vc-medical-search input {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font: 13px "DM Sans", sans-serif;
+}
+
+.vc-medical-filters select {
+  min-width: 150px;
+  padding: 12px;
+  border: 1px solid #e3ece7;
+  border-radius: 9px;
+  background: #fff;
+  color: #526d64;
+  font: 12px "DM Sans", sans-serif;
+}
+
+.vc-medical-record-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.vc-medical-record-card {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 18px 0;
+  border-bottom: 1px solid #edf2ef;
+}
+
+.vc-medical-record-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #e8f7f1;
+  color: #087f70;
+  font-size: 18px;
+}
+
+.vc-medical-record-info {
+  flex: 1;
+}
+
+.vc-medical-record-info h3 {
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+
+.vc-medical-record-info p {
+  margin: 0 0 5px;
+  color: #526d64;
+  font-size: 12px;
+}
+
+.vc-medical-record-info > span {
+  color: #84968e;
+  font-size: 11px;
+}
+
+.vc-medical-record-status {
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #e8f7f1;
+  color: #087f70;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.vc-medical-record-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.vc-medical-record-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #e3ece7;
+  border-radius: 8px;
+  background: #fff;
+  color: #087f70;
+  cursor: pointer;
+}
+
+.vc-medical-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 22px;
+  color: #84968e;
+  font-size: 12px;
+}
+
+.vc-medical-pagination div {
+  display: flex;
+  gap: 6px;
+}
+
+.vc-medical-pagination button {
+  padding: 8px 11px;
+  border: 1px solid #e3ece7;
+  border-radius: 7px;
+  background: #fff;
+  color: #526d64;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.vc-medical-pagination button.selected {
+  background: #087f70;
+  color: #fff;
+  border-color: #087f70;
+}
+
+.vc-medical-pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.vc-medical-help {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 23px;
+  padding: 22px 25px;
+  border-radius: 14px;
+  background: #e8f7f1;
+}
+
+.vc-medical-help h3 {
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+
+.vc-medical-help p {
+  margin: 0;
+  color: #71857e;
+  font-size: 12px;
+}
+
+.vc-medical-help a {
+  padding: 11px 15px;
+  border-radius: 9px;
+  background: #087f70;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+  .vc-medical-main {
+    padding: 25px;
+  }
+
+  .vc-medical-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .vc-medical-filters {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 850px) {
+  .vc-medical-sidebar {
+    width: 200px;
+  }
+
+  .vc-medical-record-card {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 650px) {
+  .vc-medical-layout {
+    flex-direction: column;
+  }
+
+  .vc-medical-sidebar {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .vc-medical-logo {
+    margin-bottom: 15px;
+  }
+
+  .vc-medical-menu-title,
+  .vc-medical-logout {
+    display: none;
+  }
+
+  .vc-medical-sidebar nav {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .vc-medical-sidebar nav a {
+    flex-shrink: 0;
+    padding: 10px;
+  }
+
+  .vc-medical-main {
+    padding: 20px 15px;
+  }
+
+  .vc-medical-header h1 {
+    font-size: 23px;
+  }
+
+  .vc-medical-header-user strong {
+    display: none;
+  }
+
+  .vc-medical-filters {
+    flex-direction: column;
+  }
+
+  .vc-medical-filters select {
+    width: 100%;
+  }
+
+  .vc-medical-record-card {
+    align-items: flex-start;
+  }
+
+  .vc-medical-record-status {
+    margin-left: 60px;
+  }
+
+  .vc-medical-pagination {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .vc-medical-help {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

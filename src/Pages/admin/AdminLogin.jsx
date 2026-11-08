@@ -32,7 +32,7 @@ function AdminLogin() {
             required
           />
 
-          <button type="submit">Login as Admin</button>
+          <Link to={'/admin/dashboard'} type="submit">Login as Admin</Link>
         </form>
 
         <p className="admin-user-login">

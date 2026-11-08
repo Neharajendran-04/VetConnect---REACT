@@ -41,7 +41,7 @@ function Login() {
 
         <div className="admin-login">
           <span>Are you an admin?</span>
-          <Link to="/admin/login">Login as Admin</Link>
+          <Link to="/admin/dashboard">Login as Admin</Link>
         </div>
       </div>
     </div>

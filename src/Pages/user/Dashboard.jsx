@@ -15,6 +15,7 @@ import {
   FaCalendarCheck,
 } from "react-icons/fa";
 import "./Dashboard.css";
+import DashboardSidebar from "../../Components/DashboardSidebar";
 
 const calendarDays = [
   null, null, null, null, null, null, 1,
@@ -28,41 +29,7 @@ const calendarDays = [
 function Dashboard() {
   return (
     <div className="vc-dashboard">
-      <aside className="vc-sidebar">
-        <Link to="/user/dashboard" className="vc-sidebar-logo" title="VetConnect">
-          <FaPaw />
-        </Link>
-
-        <nav className="vc-sidebar-nav">
-          <Link to="/user/dashboard" className="vc-nav-icon active" title="Dashboard">
-            <FaHome />
-          </Link>
-
-          <Link
-            to="/user/find-vet"
-            className="vc-nav-icon"
-            title="Find Veterinarian"
-          >
-            <FaUserMd />
-          </Link>
-
-          <Link
-            to="/appointments"
-            className="vc-nav-icon"
-            title="Appointments"
-          >
-            <FaCalendarAlt />
-          </Link>
-
-          <Link to="/profile" className="vc-nav-icon" title="Profile">
-            <FaUser />
-          </Link>
-        </nav>
-
-        <Link to="/login" className="vc-nav-icon vc-logout" title="Logout">
-          <FaSignOutAlt />
-        </Link>
-      </aside>
+      <DashboardSidebar />
 
       <main className="vc-dashboard-main">
         <header className="vc-header">

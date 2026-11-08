@@ -4,6 +4,7 @@ import { FaPaw } from "react-icons/fa";
 import "./Register.css";
 
 function Register() {
+  
   return (
     <div className="register-page">
       <div className="register-card">
@@ -19,7 +20,7 @@ function Register() {
           <input type="password" placeholder="Password" required />
           <input type="password" placeholder="Confirm Password" required />
 
-          <button type="submit">Register</button>
+          <Link to={'/login'} type="submit">Register</Link>
         </form>
 
         <p className="register-login-text">

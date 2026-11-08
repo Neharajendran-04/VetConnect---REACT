@@ -1,0 +1,637 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+.vc-book-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f7faf8;
+  color: #173f38;
+  font-family: "DM Sans", sans-serif;
+}
+
+.vc-book-page * {
+  box-sizing: border-box;
+}
+
+.vc-book-sidebar {
+  width: 78px;
+  min-width: 78px;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+  background: #ffffff;
+  border-right: 1px solid #e8efeb;
+  z-index: 10;
+}
+
+.vc-book-logo {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #087f70;
+  color: #ffffff;
+  border-radius: 15px;
+  font-size: 23px;
+}
+
+.vc-book-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 55px;
+}
+
+.vc-book-nav a,
+.vc-book-logout {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #84968e;
+  border-radius: 13px;
+  font-size: 18px;
+  transition: 0.2s ease;
+}
+
+.vc-book-nav a:hover,
+.vc-book-nav a.active {
+  background: #e8f7f1;
+  color: #087f70;
+}
+
+.vc-book-logout {
+  margin-top: auto;
+}
+
+.vc-book-logout:hover {
+  color: #d9534f;
+  background: #fff0ee;
+}
+
+.vc-book-main {
+  width: calc(100% - 78px);
+  margin-left: 78px;
+  padding: 35px 45px;
+}
+
+.vc-book-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.vc-book-eyebrow {
+  margin: 0 0 8px;
+  color: #087f70;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.vc-book-header h1 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.vc-book-subtitle {
+  margin: 8px 0 0;
+  color: #84968e;
+  font-size: 14px;
+}
+
+.vc-book-header-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.vc-book-notification {
+  width: 42px;
+  height: 42px;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e5ece8;
+  border-radius: 13px;
+  color: #526b63;
+  font-size: 16px;
+}
+
+.vc-book-notification span {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 7px;
+  height: 7px;
+  background: #e76f51;
+  border-radius: 50%;
+}
+
+.vc-book-user {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.vc-book-avatar {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d9eee6;
+  color: #087f70;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+.vc-book-user strong,
+.vc-book-user span {
+  display: block;
+}
+
+.vc-book-user strong {
+  font-size: 13px;
+}
+
+.vc-book-user span {
+  margin-top: 3px;
+  color: #84968e;
+  font-size: 12px;
+}
+
+.vc-book-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  align-items: start;
+  gap: 25px;
+}
+
+.vc-book-form-card,
+.vc-book-summary-card,
+.vc-book-help-card {
+  background: #ffffff;
+  border: 1px solid #edf1ee;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(23, 63, 56, 0.025);
+}
+
+.vc-book-form-card {
+  padding: 30px;
+}
+
+.vc-book-form-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #edf1ee;
+}
+
+.vc-book-heading-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8f7f1;
+  color: #087f70;
+  border-radius: 14px;
+  font-size: 20px;
+}
+
+.vc-book-form-heading h2 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.vc-book-form-heading p {
+  margin: 6px 0 0;
+  color: #84968e;
+  font-size: 13px;
+}
+
+.vc-book-form-section {
+  padding: 25px 0;
+  border-bottom: 1px solid #edf1ee;
+}
+
+.vc-book-form-section h3 {
+  margin: 0 0 20px;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.vc-book-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.vc-book-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 18px;
+}
+
+.vc-book-field:last-child {
+  margin-bottom: 0;
+}
+
+.vc-book-field label {
+  color: #36574e;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.vc-book-input-wrapper {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 14px;
+  border: 1px solid #e3ebe6;
+  border-radius: 10px;
+  color: #84968e;
+  background: #ffffff;
+}
+
+.vc-book-input-wrapper:focus-within {
+  border-color: #087f70;
+  box-shadow: 0 0 0 3px rgba(8, 127, 112, 0.08);
+}
+
+.vc-book-input-wrapper input,
+.vc-book-input-wrapper select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #36574e;
+  font-family: inherit;
+  font-size: 12px;
+  min-width: 0;
+}
+
+.vc-book-input-wrapper select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.vc-book-select-icon {
+  font-size: 10px;
+  pointer-events: none;
+}
+
+.vc-book-field textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #e3ebe6;
+  border-radius: 10px;
+  outline: none;
+  resize: vertical;
+  color: #36574e;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.vc-book-field textarea:focus {
+  border-color: #087f70;
+  box-shadow: 0 0 0 3px rgba(8, 127, 112, 0.08);
+}
+
+.vc-book-field textarea::placeholder {
+  color: #a0afa8;
+}
+
+.vc-book-type-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.vc-book-type-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  border: 1px solid #e3ebe6;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.vc-book-type-option:has(input:checked) {
+  border-color: #087f70;
+  background: #f0faf6;
+}
+
+.vc-book-type-option input {
+  accent-color: #087f70;
+}
+
+.vc-book-type-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #087f70;
+}
+
+.vc-book-type-content > svg {
+  font-size: 20px;
+}
+
+.vc-book-type-content strong,
+.vc-book-type-content small {
+  display: block;
+}
+
+.vc-book-type-content strong {
+  color: #173f38;
+  font-size: 12px;
+}
+
+.vc-book-type-content small {
+  margin-top: 5px;
+  color: #84968e;
+  font-size: 10px;
+}
+
+.vc-book-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  padding-top: 25px;
+}
+
+.vc-book-cancel-btn,
+.vc-book-submit-btn {
+  min-height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.vc-book-cancel-btn {
+  color: #526b63;
+  border: 1px solid #e3ebe6;
+  background: #ffffff;
+}
+
+.vc-book-submit-btn {
+  color: #ffffff;
+  background: #087f70;
+  border: none;
+  transition: 0.2s ease;
+}
+
+.vc-book-submit-btn:hover {
+  background: #06695d;
+}
+
+.vc-book-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vc-book-summary-banner {
+  padding: 25px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #087f70, #0b9b82);
+  color: #ffffff;
+}
+
+.vc-book-summary-banner-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.17);
+  border-radius: 13px;
+  font-size: 21px;
+}
+
+.vc-book-summary-banner h2 {
+  margin: 18px 0 10px;
+  font-family: "Manrope", sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.vc-book-summary-banner p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.vc-book-summary-card {
+  padding: 24px;
+}
+
+.vc-book-summary-card h3 {
+  margin: 0 0 20px;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.vc-book-summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 0;
+  border-bottom: 1px solid #edf1ee;
+}
+
+.vc-book-summary-item span {
+  color: #84968e;
+  font-size: 11px;
+}
+
+.vc-book-summary-item strong {
+  color: #173f38;
+  font-size: 13px;
+}
+
+.vc-book-summary-note {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 14px;
+  background: #fff8e9;
+  color: #b48732;
+  border-radius: 10px;
+}
+
+.vc-book-summary-note svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.vc-book-summary-note p {
+  margin: 0;
+  color: #98742d;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.vc-book-help-card {
+  padding: 22px;
+}
+
+.vc-book-help-card h4 {
+  margin: 0 0 8px;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+}
+
+.vc-book-help-card p {
+  margin: 0 0 14px;
+  color: #84968e;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.vc-book-help-card a {
+  color: #087f70;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+  .vc-book-main {
+    padding: 30px 25px;
+  }
+
+  .vc-book-layout {
+    grid-template-columns: minmax(0, 1fr) 270px;
+    gap: 18px;
+  }
+
+  .vc-book-form-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 950px) {
+  .vc-book-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .vc-book-summary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vc-book-summary-banner {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .vc-book-sidebar {
+    width: 100%;
+    min-width: 100%;
+    height: 65px;
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 8px 12px;
+    border-right: none;
+    border-top: 1px solid #e8efeb;
+  }
+
+  .vc-book-logo,
+  .vc-book-logout {
+    display: none;
+  }
+
+  .vc-book-nav {
+    margin: 0;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .vc-book-nav a {
+    width: 42px;
+    height: 42px;
+  }
+
+  .vc-book-main {
+    width: 100%;
+    margin-left: 0;
+    padding: 25px 16px 90px;
+  }
+
+  .vc-book-header h1 {
+    font-size: 24px;
+  }
+
+  .vc-book-header-right {
+    gap: 10px;
+  }
+
+  .vc-book-user {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .vc-book-form-grid,
+  .vc-book-type-options,
+  .vc-book-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .vc-book-form-card {
+    padding: 18px;
+  }
+
+  .vc-book-form-heading h2 {
+    font-size: 17px;
+  }
+
+  .vc-book-form-heading p {
+    font-size: 11px;
+  }
+
+  .vc-book-form-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .vc-book-cancel-btn,
+  .vc-book-submit-btn {
+    width: 100%;
+  }
+
+  .vc-book-subtitle {
+    font-size: 12px;
+  }
+}
