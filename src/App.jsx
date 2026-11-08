@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import SelectPortal from './Pages/public/SelectPortal'
 import Login from './Pages/public/Login'
 import Register from './Pages/public/Register'
 import Dashboard from './Pages/user/Dashboard'
@@ -16,8 +15,8 @@ import ManageAppointments from './Pages/admin/ManageAppointments'
 import ManageDoctors from './Pages/admin/ManageDoctors'
 import Home from './Pages/public/Home'
 import ManageUsers from './Pages/admin/ManageUsers'
-import Header from './Components/Header'
-import Footer from './Components/Footer'
+import FindVet from './Pages/user/FindVet'
+
 
 
 
@@ -25,11 +24,9 @@ function App() {
 
   return (
     <>
-    <Header />
       <Routes>
         {/* Public paths */}
         <Route path='/' element={<Home />}/>
-        <Route path='/select-portal' element={<SelectPortal />}/>
         <Route path='/login' element={<Login />}/>
         <Route path='/register' element={<Register />}/>
 
@@ -41,6 +38,7 @@ function App() {
         <Route path='/user/appointments' element={<MyAppointments />}/>
         <Route path='/user/medical-records' element={<MedicalRecords />}/>
         <Route path='/user/profile' element={<MyProfile />}/>
+        <Route path='/user/find-vet' element={<FindVet />}/>
 
         {/* Admin paths */}
         <Route path='/admin/login' element={<AdminLogin />}/>
@@ -51,7 +49,6 @@ function App() {
 
 
       </Routes>
-      <Footer />
     </>
   )
 }

@@ -15,7 +15,7 @@
   overflow: hidden;
   position: relative;
 }
-/* TOP CONTENT */
+
 
 .contact-top {
   display: flex;
@@ -59,7 +59,7 @@
   margin: 22px 0 28px;
 }
 
-/* CONTACT LINKS */
+
 
 .contact-links {
   display: flex;
@@ -90,7 +90,6 @@
   transform: rotate(45deg);
 }
 
-/* DECORATION */
 
 .contact-decoration {
   position: relative;
@@ -134,8 +133,6 @@
   font-size: 12px;
   letter-spacing: 2px;
 }
-
-/* FORM */
 
 .contact-form-wrap {
   max-width: 780px;
@@ -207,8 +204,6 @@
   background: #06665b !important;
 }
 
-/* BOTTOM */
-
 .contact-footer-note {
   display: flex;
   justify-content: space-between;
@@ -224,7 +219,6 @@
   color: #087f70;
 }
 
-/* RESPONSIVE */
 
 @media (max-width: 768px) {
   .contact-section {

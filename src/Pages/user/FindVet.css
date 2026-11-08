@@ -1,0 +1,509 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+.vc-vet-page {
+  display: flex;
+  min-height: 100vh;
+  background: #f7faf8;
+  color: #173f38;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+}
+
+/* Sidebar */
+
+.vc-vet-sidebar {
+  width: 76px;
+  min-width: 76px;
+  background: #ffffff;
+  border-right: 1px solid #e7efeb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 0;
+  gap: 40px;
+}
+
+.vc-vet-logo {
+  width: 45px;
+  height: 45px;
+  background: #087f70;
+  color: white;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+
+.vc-vet-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.vc-vet-nav a,
+.vc-vet-logout {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: #84968e;
+  font-size: 18px;
+  transition: 0.2s ease;
+}
+
+.vc-vet-nav a:hover,
+.vc-vet-nav a.active {
+  background: #e8f7f1;
+  color: #087f70;
+}
+
+.vc-vet-logout {
+  margin-top: auto;
+}
+
+/* Main Content */
+
+.vc-vet-main {
+  flex: 1;
+  min-width: 0;
+  padding: 38px 45px;
+}
+
+.vc-vet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.vc-vet-date {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: #087f70;
+}
+
+.vc-vet-header h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  line-height: 1.3;
+  margin: 12px 0;
+  color: #173f38;
+}
+
+.vc-vet-header p {
+  margin: 0;
+  color: #71847d;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.vc-vet-notification {
+  width: 46px;
+  height: 46px;
+  border: 1px solid #e8efeb;
+  background: #ffffff;
+  border-radius: 14px;
+  color: #173f38;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.vc-vet-notification:hover {
+  background: #e8f7f1;
+  color: #087f70;
+}
+
+/* Search Section */
+
+.vc-vet-search-section {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 38px;
+}
+
+.vc-vet-search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  background: #ffffff;
+  border: 1px solid #e3ece7;
+  border-radius: 15px;
+  padding: 9px 10px 9px 18px;
+  color: #84968e;
+  box-shadow: 0 3px 12px rgba(23, 63, 56, 0.02);
+}
+
+.vc-vet-search-box input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  color: #173f38;
+  background: transparent;
+}
+
+.vc-vet-search-box input::placeholder {
+  color: #9aa9a2;
+}
+
+.vc-vet-search-box button {
+  background: #087f70;
+  border: none;
+  color: white;
+  padding: 13px 24px;
+  border-radius: 11px;
+  font-family: "DM Sans", sans-serif;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.vc-vet-search-box button:hover {
+  background: #06685d;
+}
+
+.vc-vet-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 17px;
+  background: #ffffff;
+  border: 1px solid #e3ece7;
+  border-radius: 15px;
+  color: #087f70;
+}
+
+.vc-vet-filter select {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #173f38;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Results Heading */
+
+.vc-vet-results-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.vc-vet-results-heading h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  margin: 0 0 8px;
+  color: #173f38;
+}
+
+.vc-vet-results-heading p {
+  font-size: 14px;
+  color: #82938c;
+  margin: 0;
+}
+
+/* Veterinarian Grid */
+
+.vc-vet-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Veterinarian Card */
+
+.vc-vet-card {
+  background: #ffffff;
+  border: 1px solid #e7efeb;
+  border-radius: 22px;
+  padding: 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.vc-vet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 32px rgba(8, 127, 112, 0.09);
+  border-color: #c8e5da;
+}
+
+.vc-vet-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.vc-vet-availability {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #087f70;
+  font-size: 11px;
+  font-weight: 600;
+  background: #e8f7f1;
+  padding: 8px 11px;
+  border-radius: 20px;
+}
+
+.vc-vet-status-dot {
+  width: 6px;
+  height: 6px;
+  background: #087f70;
+  border-radius: 50%;
+}
+
+.vc-vet-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #173f38;
+}
+
+.vc-vet-rating svg {
+  color: #d5a94f;
+}
+
+.vc-vet-rating small {
+  font-size: 11px;
+  font-weight: 400;
+  color: #84968e;
+}
+
+/* Doctor Image */
+
+.vc-vet-doctor {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0 18px;
+}
+
+.vc-vet-doctor img {
+  width: 115px;
+  height: 115px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #e8f7f1;
+}
+
+/* Doctor Information */
+
+.vc-vet-card-info {
+  text-align: center;
+  line-height: 1.6;
+}
+
+.vc-vet-card-info h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin: 0 0 10px;
+  color: #173f38;
+}
+
+.vc-vet-specialty {
+  display: inline-block;
+  color: #087f70;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  background: #e8f7f1;
+  padding: 7px 13px;
+  border-radius: 20px;
+}
+
+.vc-vet-clinic,
+.vc-vet-experience {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #71847d;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 14px 0;
+}
+
+.vc-vet-clinic svg,
+.vc-vet-experience svg {
+  color: #087f70;
+  flex-shrink: 0;
+}
+
+/* Card Buttons */
+
+.vc-vet-card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.vc-vet-profile-btn,
+.vc-vet-book-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 13px 10px;
+  border-radius: 11px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.vc-vet-profile-btn {
+  flex: 1;
+  background: #e8f7f1;
+  color: #087f70;
+  border: none;
+}
+
+.vc-vet-profile-btn:hover {
+  background: #d6eee5;
+}
+
+.vc-vet-book-btn {
+  flex: 1;
+  background: #087f70;
+  color: #ffffff;
+}
+
+.vc-vet-book-btn:hover {
+  background: #06685d;
+  color: white;
+}
+
+/* Empty Results */
+
+.vc-vet-empty {
+  text-align: center;
+  padding: 65px 20px;
+  background: #ffffff;
+  border-radius: 20px;
+  color: #84968e;
+}
+
+.vc-vet-empty svg {
+  font-size: 32px;
+  color: #087f70;
+}
+
+.vc-vet-empty h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #173f38;
+}
+
+.vc-vet-empty p {
+  font-size: 14px;
+}
+
+/* Footer */
+
+.vc-vet-footer {
+  text-align: center;
+  color: #9aaba4;
+  font-size: 12px;
+  padding: 45px 0 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .vc-vet-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vc-vet-main {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 700px) {
+  .vc-vet-page {
+    flex-direction: column;
+  }
+
+  .vc-vet-sidebar {
+    width: 100%;
+    min-width: 100%;
+    height: 65px;
+    padding: 10px 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    border-right: none;
+    border-bottom: 1px solid #e7efeb;
+  }
+
+  .vc-vet-nav {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .vc-vet-nav a,
+  .vc-vet-logout {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .vc-vet-logout {
+    margin-top: 0;
+  }
+
+  .vc-vet-main {
+    padding: 25px 17px;
+  }
+
+  .vc-vet-header h1 {
+    font-size: 25px;
+  }
+
+  .vc-vet-header p {
+    font-size: 13px;
+  }
+
+  .vc-vet-search-section {
+    flex-direction: column;
+  }
+
+  .vc-vet-search-box {
+    padding-left: 12px;
+  }
+
+  .vc-vet-search-box button {
+    padding: 12px 15px;
+  }
+
+  .vc-vet-filter {
+    min-height: 48px;
+  }
+
+  .vc-vet-grid {
+    grid-template-columns: 1fr;
+  }
+}

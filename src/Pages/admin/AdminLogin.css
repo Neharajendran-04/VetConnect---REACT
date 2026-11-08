@@ -1,0 +1,118 @@
+.admin-login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background: linear-gradient(135deg, #e8f7f1, #f8fbf9);
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 10px 35px rgba(23, 63, 56, 0.12);
+}
+
+.admin-back-home {
+  display: inline-block;
+  color: #087f70;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.admin-back-home:hover {
+  text-decoration: underline;
+}
+
+.admin-login-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #087f70;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.admin-login-card h1 {
+  text-align: center;
+  color: #173f38;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.admin-login-card > p {
+  text-align: center;
+  color: #6b827c;
+  margin-bottom: 25px;
+}
+
+.admin-login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-login-card input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d6e5df;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+.admin-login-card input:focus {
+  border-color: #087f70;
+  box-shadow: 0 0 0 3px rgba(8, 127, 112, 0.1);
+}
+
+.admin-login-card form button {
+  padding: 14px;
+  background: #087f70;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.admin-login-card form button:hover {
+  background: #066658;
+}
+
+.admin-user-login {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 14px;
+  color: #6b827c;
+}
+
+.admin-user-login a {
+  color: #087f70;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.admin-user-login a:hover {
+  text-decoration: underline;
+}
+
+
+
+@media (max-width: 480px) {
+  .admin-login-card {
+    padding: 30px 22px;
+  }
+
+  .admin-login-card h1 {
+    font-size: 26px;
+  }
+}

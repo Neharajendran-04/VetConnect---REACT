@@ -36,7 +36,7 @@ function Hero() {
                 Find a Veterinarian <FaArrowRight />
               </Button>
    
-              <Link to={'/select-portal'} className="secondary-btn">
+              <Link to={'/register'} className="secondary-btn">
                 Get Started
               </Link>
             </div>

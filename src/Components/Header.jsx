@@ -43,12 +43,12 @@ function Header() {
           </Nav>
 
           <Nav className="vet-nav-actions">
-            <Nav.Link href="/select-portal" className="vet-login">
+            <Nav.Link href="/login" className="vet-login">
               Login
             </Nav.Link>
 
             <Button
-              href="/select-portal"
+              href="/register"
               className="vet-register"
             >
               Get Started
