@@ -1,9 +1,40 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { FaPaw } from "react-icons/fa";
+import { loginApi } from "../../services/apiServices";
 import "./Login.css";
 
 function Login() {
+
+  const navigate = useNavigate()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+   try{
+    
+    const response = await loginApi({ email, password })
+    console.log(response.data);
+    // check whether response contains matching user
+    if (response.data.length > 0) {
+      const loggedInUser = response.data[0]
+      // remember the logged in user 
+      localStorage.setItem(
+        'loggedInUser',
+        JSON.stringify(loggedInUser)
+      );
+      alert('Login successful')
+      navigate('/user/dashboard')
+    }
+    else {
+      alert('Invalid email or password')
+    }
+  }catch(error){
+     alert('Something went wrong. Please try again.');
+  }
+
+  }
   return (
     <div className="login-page">
       <div className="login-card">
@@ -19,20 +50,24 @@ function Login() {
         <h1>Welcome Back!</h1>
         <p>Login to continue caring for your pets.</p>
 
-        <form>
+        <form onSubmit={handleLogin}>
           <input
+            value={email}
+            onChange={e => setEmail(e.target.value)}
             type="email"
             placeholder="Email Address"
             required
           />
 
           <input
+            value={password}
+            onChange={e => setPassword(e.target.value)}
             type="password"
             placeholder="Password"
             required
           />
 
-          <Link className="btn" to={'/user/dashboard'} type="submit">Login</Link>
+          <button type="submit">Login</button>
         </form>
 
         <p className="register-text">
